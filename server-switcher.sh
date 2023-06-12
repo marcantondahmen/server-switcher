@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 #
 # Server Switcher
 # (c) 2023 Marc Anton Dahmen, MIT license
@@ -132,7 +132,7 @@ parseSelected() {
 	if printf "$1" | grep -qis 'apache'; then startApache; return; fi
 }
 
-selected=$(printf "$(createOptions)" | fzf --cycle)
+selected=$(printf "$(createOptions)" | fzf)
 
 if [[ -z $selected ]]
 then
