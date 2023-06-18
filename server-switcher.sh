@@ -132,7 +132,7 @@ parseSelected() {
 	if printf "$1" | grep -qis 'apache'; then startApache; return; fi
 }
 
-selected=$(printf "$(createOptions)" | fzf)
+selected=$(printf "$(createOptions)" | fzf --layout=reverse --height=30%)
 
 if [[ -z $selected ]]
 then
