@@ -24,7 +24,17 @@ addNginxLocations() {
 
 	echo "Adding locations for all sites ..."
 
-	local sites=$(find $DOC_ROOT -type f -mindepth 2 -maxdepth 6 -name index.php -exec dirname {} \;)
+	local sites=$(\
+		find $DOC_ROOT \
+		-type f \
+		-name index.php \
+		-mindepth 2 \
+		-maxdepth 8 \
+		-exec dirname {} \; | \
+		grep -v 'cache' | \
+		grep -v 'vendor'\
+	)
+
 	local locations="\n"
 
 	for site in $sites
