@@ -65,7 +65,7 @@ renderConfig() {
 
 createOptions() {
 	local options=''
-	local phpVersions=$(brew list | grep php)
+	local phpVersions=$(brew list | grep -E "php(@|$)")
 
 	for server in 'Apache' 'Nginx' 'Apache Proxy > Nginx' 'Nginx Proxy > Apache' 
 	do
