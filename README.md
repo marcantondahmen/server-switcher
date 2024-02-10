@@ -66,7 +66,7 @@ that is hosted by Nginx or vice versa.
 In order to use the switcher, simply run the `server-switcher.sh` inside this repository. However it is probaly more convenient to add a little alias to your shell config:
 
 ```
-alias www='sh ~/server-switcher/server-switcher.sh'
+alias srv='sh ~/server-switcher/server-switcher.sh'
 ```
 
-and then invoke the switcher with just typing `www` in your terminal to get nice fuzzy-finder menu with all possible combinations of servers and PHP versions.
+and then invoke the switcher with just typing `srv` in your terminal to get nice fuzzy-finder menu with all possible combinations of servers and PHP versions.
